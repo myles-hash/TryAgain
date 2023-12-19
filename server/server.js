@@ -10,6 +10,13 @@ app.get("/", function(request,response){
     response.json("Looking at root route");
 })
 
+app.post("/messages",function(request,response){
+    console.log("This is working");
+    const newMessage = request.body;
+    response.json(newMessage);
+    console.log(newMessage);
+})
+
 
 app.listen(8080, function(){
     console.log("App is running");
